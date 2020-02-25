@@ -91,8 +91,8 @@ namespace Uppgift2.Controllers
         [HttpPost]
         public IActionResult Add()
         {
-            int num1 = Convert.ToInt32(HttpContext.Request.Form["txtFirst"].ToString());
-            int num2 = Convert.ToInt32(HttpContext.Request.Form["txtSecond"].ToString());
+            int num1 = Convert.ToInt32(HttpContext.Request.Form["num1"].ToString());
+            int num2 = Convert.ToInt32(HttpContext.Request.Form["num2"].ToString());
             int result = num1 + num2;
             ViewBag.SumResult = result.ToString();
             return View("Calculate");
