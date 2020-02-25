@@ -22,17 +22,19 @@ namespace Uppgift2.Controllers
             HttpContext.Session.SetString("date", dt);
             ViewBag.dateSession = dt;
 
-            ViewData["Message"] = "Det finns många olika varianter av Lorem Ipsum, " +
-                                            "men majoriteten av dessa har ändrats på någotvis. " +
-                                            " Antingen med inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. " +
-                                           "Skall man använda långa stycken av Lorem Ipsum bör " +
-                                           "man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. " +
-                                           "Lorem Ipsum-generatorer på internet tenderar att repetera Lorem Ipsum-texten " +
-                                           "styckvis efter behov, något som gör denna sidan till den första riktiga Lorem " +
-                                           "Ipsum-generatorn på internet. Den använder ett ordförråd på över 200 ord, " +
-                                           "kombinerat med ett antal meningsbyggnadsstrukturer som tillsamman genererar " +
-                                           "Lorem Ipsum som ser ut som en normal mening. Lorem Ipsum genererad på denna " +
-                                           "sidan är därför alltid fri från repetitioner, humorinslag, märkliga ordformationer osv.";
+            ViewData["Headline"] = "Lorem Ipsum";
+           ViewData["Description"] = 
+                "Det finns många olika varianter av Lorem Ipsum, " +
+                "men majoriteten av dessa har ändrats på någotvis. " +
+                " Antingen med inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. " +
+                "Skall man använda långa stycken av Lorem Ipsum bör " +
+                "man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. " +
+                "Lorem Ipsum-generatorer på internet tenderar att repetera Lorem Ipsum-texten " +
+                "styckvis efter behov, något som gör denna sidan till den första riktiga Lorem " +
+                "Ipsum-generatorn på internet. Den använder ett ordförråd på över 200 ord, " +
+                "kombinerat med ett antal meningsbyggnadsstrukturer som tillsamman genererar " +
+                "Lorem Ipsum som ser ut som en normal mening. Lorem Ipsum genererad på denna " +
+                "sidan är därför alltid fri från repetitioner, humorinslag, märkliga ordformationer osv.";
 
             return View();
         }
