@@ -1,0 +1,164 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5em;
+    background: #f1f1f1;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    color: #491905;
+    position: relative;
+}
+
+/* Header */
+.header {
+    border-bottom: #e8491d 3px solid;
+    border-top: #e8491d 3px solid;
+    padding: 5px;
+    text-align: center;
+    background: white;
+    margin-bottom: 25px;
+}
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 20%;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 165px 0;
+    overflow-x: hidden;
+    border-right: #e8491d 3px solid;
+    border-left: #e8491d 3px solid;
+}
+
+    .leftcolumn a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5rem;
+        color: black;
+        display: block;
+        padding: 12px;
+        background-color: olivedrab;
+        border-bottom: #e8491d 3px solid;
+        border-top: #e8491d 3px solid;
+    }
+
+        .leftcolumn a:hover {
+            color: brown;
+        }
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 80%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Media queries*/
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Form */
+form {
+    max-width: 700px;
+    margin: auto
+}
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: #ff7b00;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+    .input-field:focus {
+        border: 2px solid #ff7b00;
+    }
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #ff7b00;
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 45px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .btn:hover {
+        opacity: 1;
+    }
+
+    .txt{
+        text-align: center;
+    }
+/*TABLE*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    margin: auto
+}
+td, th {
+    text-align: left;
+    padding: 8px
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+    color: white;
+}
+
+th {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Calculate Page";
+}
+
+<h2 class="txt">Welcome to calculate Page</h2>
+
+<form asp-controller="Home" asp-action="Add" method="post">
+
+    <div class="input-container">
+        <i class="icon"></i>
+        <input id="Text1" type="text" name="txtFirst" class="input-field" required />
+    </div>
+
+    <div class="input-container">
+        <i class="icon"></i>
+        <input id="Text1" type="text" name="txtSecond" class="input-field" required />
+    </div>
+
+    <input id="Submit1" type="submit" value="CALCULATE" class="btn" />
+</form>
+
+
+<h2 class="txt">@ViewBag.SumResult</h2>
