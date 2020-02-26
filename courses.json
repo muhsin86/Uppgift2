@@ -1,8 +1,14 @@
 [
   {
     "Code": "DT102G",
-    "Name": "Lorem Ipsum",
+    "Name": "ASP.NET med C#, 7,5 hp",
     "Url": "miun.se",
     "Progression": "B"
+  },
+  {
+    "Code": "DT102G",
+    "Name": "Asp.net core 3.1",
+    "Url": "miun.se",
+    "Progression": "A"
   }
 ]

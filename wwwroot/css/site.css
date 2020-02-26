@@ -1,5 +1,4 @@
-﻿
-* {
+﻿* {
     box-sizing: border-box;
 }
 
@@ -93,7 +92,7 @@ body {
 
 /* Form */
 form {
-    max-width: 700px;
+    max-width: 500px;
     margin: auto;
 }
 .input-container {
@@ -140,11 +139,22 @@ form {
     .txt{
         text-align: center;
     }
+
+.alert {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color: green;
+    padding: 25px 0;
+    margin-bottom: 25px;
+}
+
 /*TABLE*/
 table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
 }
 td, th {
@@ -160,4 +170,10 @@ tr:nth-child(even) {
 th {
     background-color: black;
     color: white;
+}
+
+/* Success Message */
+.success{
+    background-color: darkgreen;
+    color: darkslategrey;
 }

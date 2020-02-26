@@ -5,6 +5,9 @@
 }
 
 <h2 class="txt">ADD COURSE</h2>
+<div class="alert">
+    @TempData["success"]
+</div>
 
 <form asp-controller="Home" asp-action="Courses" method="post">
     <div class="input-container">
@@ -51,3 +54,4 @@
         }
     </tbody>
 </table>
+

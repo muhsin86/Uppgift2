@@ -19,11 +19,11 @@ namespace Uppgift2.Controllers
         public IActionResult Index()
         {
             var dt = DateTime.Now.ToString("HH:mm:ss");
-            HttpContext.Session.SetString("date", dt);
+            HttpContext.Session.GetString("dt");
             ViewBag.dateSession = dt;
 
             ViewData["Headline"] = "Lorem Ipsum";
-           ViewData["Description"] = 
+            ViewData["Description"] = 
                 "Det finns många olika varianter av Lorem Ipsum, " +
                 "men majoriteten av dessa har ändrats på någotvis. " +
                 " Antingen med inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. " +
@@ -39,20 +39,14 @@ namespace Uppgift2.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            var dt = DateTime.Now.ToString("HH:mm:ss");
-            HttpContext.Session.SetString("date", dt);
-            ViewBag.dateSession = dt;
-            return View();
-        }
-
         [HttpGet]
         public IActionResult Courses()
         {
             var dt = DateTime.Now.ToString("HH:mm:ss");
-            HttpContext.Session.SetString("date", dt);
+            HttpContext.Session.GetString("dt");
             ViewBag.dateSession = dt;
+
+            // Läs in Json file 
             var jsonStr = System.IO.File.ReadAllText("courses.json");
             var jsonObj = JsonConvert.DeserializeObject<List<CourseModel>>(jsonStr);
             ViewBag.Courses = jsonObj;
@@ -64,6 +58,10 @@ namespace Uppgift2.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                var dt = DateTime.Now.ToString("HH:mm:ss");
+                HttpContext.Session.GetString("dt");
+                ViewBag.dateSession = dt;
                 // Läs in befintlig
                 var JsonStr = System.IO.File.ReadAllText("courses.json");
                 var JsonObj = JsonConvert.DeserializeObject<List<CourseModel>>(JsonStr);
@@ -76,13 +74,23 @@ namespace Uppgift2.Controllers
 
 
             }
+
+            // Läs in Json file 
+            var jsonStr = System.IO.File.ReadAllText("courses.json");
+            var jsonObj = JsonConvert.DeserializeObject<List<CourseModel>>(jsonStr);
+            ViewBag.Courses = jsonObj;
+
+            // Visa meddelande när en kurs har lägt 
+            TempData["success"] = "The course has been added!";
+
+
             return View();
         }
 
         public IActionResult Calculate()
         {
             var dt = DateTime.Now.ToString("HH:mm:ss");
-            HttpContext.Session.SetString("date", dt);
+            HttpContext.Session.GetString("dt");
             ViewBag.dateSession = dt;
 
             return View();
